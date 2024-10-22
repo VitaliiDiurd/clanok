@@ -1,124 +1,56 @@
-% Metódy inžinierskej práce
-
-\documentclass[10pt,twoside,slovak,a4paper]{article}
-
+\documentclass[10pt,twoside,slovak,a4paper]{coursepaper}
 \usepackage[slovak]{babel}
 %\usepackage[T1]{fontenc}
-\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{url} % príkaz \url na formátovanie URL
-\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\graphicspath{ {./images/} }
+\usepackage{url}
+\usepackage{hyperref}
+
 
 \usepackage{cite}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Recommender systems for YouTube\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2024/25, vedenie: Diurd Vitalii}} 
 
-\author{Meno Priezvisko\\[2pt]
+\author{Diurd Vitalii\\[2pt]
 	{\small Slovenská technická univerzita v Bratislave}\\
 	{\small Fakulta informatiky a informačných technológií}\\
-	{\small \texttt{...@stuba.sk}}
+	{\small \texttt{xdiurd@stuba.sk}}
 	}
 
-\date{\small 30. september 2015} % upravte
-
-
+\date{\small october 2024} % upravte
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-\ldots
+This article will contain information about YouTube recommender system, the way it works and why it has such a crucial role in enhancing user experience. I will explore the way YouTube`s recommender system operates, focusing on core algorithms and real-world applications. The primary objective is to understand how recommendation models (collaborative filtering, content-based filtering, hybrid approaches, etc.) work together to give user content based on his wishes. The other point of this article is to investigate how user`s behavior, including videos, comments, likes and other video interactions, helps system to understand each individual`s preferences, keeping users engaged on the platform for longer periods of time. The algorithm system not only benefits user by helping him in discovering something new, but also supports video creators by promoting their videos to proper audience, increasing interactions and viewer retention. I aim to show, by example of YouTube,   how different services recommender system is a powerful engine that helps both content discovery and platform success. I will also try to explain the importance of recommendations in nowadays digital world. The main source of information for this article was «Deep Neural Networks for YouTube Recommendations» [13].  Written by Paul Covington, Jay Adams and Emre Sargin. This article contains a big amount of information about YouTube`s algorithms and recommendation systems in general. Other sources will also be used in writing the article, all links are going to be included in used materials.
 \end{abstract}
 
 
 
 \section{Úvod}
-
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
-
-Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
-
-
-
+\includegraphics{article}
 \section{Nejaká časť} \label{nejaka}
-
-Z obr.~\ref{f:rozhod} je všetko jasné. 
-
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}
-\label{f:rozhod}
-\end{figure*}
 
 
 
 \section{Iná časť} \label{ina}
-
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
-
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
-
-
 \subsection{Nejaké vysvetlenie} \label{ina:nejake}
-
-Niekedy treba uviesť zoznam:
-
-\begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
-\end{itemize}
-
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
-
-
 \subsection{Ešte nejaké vysvetlenie} \label{ina:este}
-
 \paragraph{Veľmi dôležitá poznámka.}
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
-
-
 
 \section{Dôležitá časť} \label{dolezita}
-
-
-
-
 \section{Ešte dôležitejšia časť} \label{dolezitejsia}
+\section{Záver} \label{zaver}
+\section{Zaver po zaveru}
 
-
-
-
-\section{Záver} \label{zaver} % prípadne iný variant názvu
-
-
-
-%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-
-
-% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
 \bibliography{literatura}
-\bibliographystyle{plain} % prípadne alpha, abbrv alebo hociktorý iný
+\bibliographystyle{alpha}
+
 \end{document}
